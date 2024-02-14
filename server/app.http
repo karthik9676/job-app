@@ -1,0 +1,42 @@
+GET http://localhost:4444/auth
+
+
+###
+POST http://localhost:4444/auth/signup
+Content-Type: application/json
+
+{
+    "name":"sachin",
+    "email":"sachin@gmail.com",
+    "phoneNumber":"900000000",
+    "gender":"Male",
+    "password":"sachin123"
+}
+
+###
+POST http://localhost:4444/auth/login
+Content-Type: application/json
+
+{
+    "email" : "rohit@gmail.com",
+    "password" : "rohit123"
+}
+
+
+### 
+GET http://localhost:4444/auth/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MGQ5NjA0ZWQyMTkzYjk5N2UzNTI3NCIsImlhdCI6MTY5NTQ1OTQyOSwiZXhwIjoxNjk1NDY2NjI5fQ.DwUIOop0UO-AmcWyNg6OqlahvSn7GtHv8QIjN_E6e94
+
+
+###
+GET http://localhost:4444/api/jobs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MGQ5NjA0ZWQyMTkzYjk5N2UzNTI3NCIsImlhdCI6MTY5NTYyMDEzNiwiZXhwIjoxNjk1NjI3MzM2fQ.fqhsezj7ahQeSZBdLwCeQtXB5MpTPMCSmdGSGtaJDPU
+
+
+###
+GET http://localhost:4444/api/jobs/6511151334a65a58bdfb11df
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MGQ5NjA0ZWQyMTkzYjk5N2UzNTI3NCIsImlhdCI6MTY5NTY0MjU5NywiZXhwIjoxNjk1NjQ5Nzk3fQ.dAeXrWGl29XmZCwIXJow58G7G2oo0-TYM3-RvvXg7zc
+
+###
+GET http://localhost:4444/api/filterjobs?employment_type=int&minimum_package=11&search=
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MGQ5NjA0ZWQyMTkzYjk5N2UzNTI3NCIsImlhdCI6MTY5NTcwMTU0NywiZXhwIjoxNjk1NzA4NzQ3fQ.dax22zZxxjfKi4Thcbr2C8H1m2BJ9_fIwsi93iuFTy0
